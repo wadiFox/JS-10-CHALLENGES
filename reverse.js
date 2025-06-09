@@ -4,9 +4,18 @@
 
 function reverse_1(str){
     let reversed = "";
+    
+    /* The old for loop syntax
     for (let i = 0; i < str.length; i++){
         reversed = str[i] + reversed;
     }
+     */
+
+    // The new for loop syntax
+    for(let char of str){
+        reversed = char + reversed;
+    }
+
     return reversed;
 };
 
