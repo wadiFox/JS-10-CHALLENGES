@@ -11,3 +11,4 @@ function isPalindrome(str){
 console.log(isPalindrome('kayak')); // True
 console.log(isPalindrome('kAYak')); // True
 console.log(isPalindrome('kayaki')); // False
+
