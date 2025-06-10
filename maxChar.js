@@ -29,3 +29,4 @@ return `${maxChar} : is used => ${maxCount} times`;
 }
 
 console.log(maxChar("hellllllllkkkkkkkkkkoooohh"));
+console.log(maxChar("TV 21388"));
