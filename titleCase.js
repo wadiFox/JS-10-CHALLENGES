@@ -13,3 +13,15 @@ return result.join(' ');;
 }
 
 console.log(capital("This is ouadie trying some coding challenges"));
+
+
+// Second Method : Using Inbuild Method Map
+
+function capitalize(phrase){
+const splitedPhrase = phrase.split(' ');
+return splitedPhrase.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+// we can also write word[0] instead of word.charAt(0)
+// return splitedPhrase.map(word => word[0].toUpperCase() + word.slice(1)).join(' ');
+}
+
+console.log(capitalize("This is ouadie trying some coding challenges"));
