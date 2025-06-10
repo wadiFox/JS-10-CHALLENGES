@@ -18,7 +18,7 @@ let maxChar = '';
             maxChar = char;
             }
         }
-return maxChar;
+return `${maxChar} : is used => ${maxCount} times`;
 }
 
-console.log(maxChar("hellloooohh"));
+console.log(maxChar("hellllllllkkkkkkkkkkoooohh"));
