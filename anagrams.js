@@ -33,7 +33,7 @@ function areAnag(str1, str2) {
  // First we create a function that reurns a map of the string
  function stringMap(str) {
  const charMap = {};
- str = str.replace(/\W/g, "").toLowerCase().split("").sort().join("");
+ str = str.toLowerCase().replace(/\W/g, "");
  for (let char of str) {
   charMap[char] = ++charMap[char] || 1
   }
@@ -44,7 +44,7 @@ function areAnag(str1, str2) {
     const map1 = stringMap(String1);  
     const map2 = stringMap(String2);
   // Last we compare the two maps
-  if(Object.keys(map1).length === Object.keys(map2).length) return false;
+  if(Object.keys(map1).length !== Object.keys(map2).length) return false;
   for (let key in map1) {
     if (map1[key] !== map2[key]) return false;
     }
@@ -56,3 +56,4 @@ function areAnag(str1, str2) {
 
 console.log(areAnagrams("ahol?? tUtti3332?", "?ttiut? 33OLha?23"));
 console.log(areAnag("hol??? tUtti", "ttiut OLh!!"));
+console.log(areAnagra("ahol?? tUtti3332?", "?ttut? 33OLha3"));
