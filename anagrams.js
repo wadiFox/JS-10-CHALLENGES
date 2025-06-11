@@ -19,5 +19,16 @@ function areAnagrams(str1, str2) {
     return sortedStr1 === sortedStr2;
 }
 
+// Making a clean code
+
+function cleanString(str){
+  return str.replace(/\W/g, "").toLowerCase().split("").sort().join("");
+}
+// Now we can use the cleanString function to check if two strings are anagrams
+function areAnagrams(str1, str2) {
+  return cleanString(str1) === cleanString(str2);
+  }
+  
+
 console.log(areAnagrams("ahol?? tUtti3332?", "?ttiut? 33OLha?23"));
 console.log(areAnagrams("hol??? tUtti", "ttiut OLh!!"));
