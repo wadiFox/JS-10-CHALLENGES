@@ -25,10 +25,34 @@ function cleanString(str){
   return str.replace(/\W/g, "").toLowerCase().split("").sort().join("");
 }
 // Now we can use the cleanString function to check if two strings are anagrams
-function areAnagrams(str1, str2) {
+function areAnag(str1, str2) {
   return cleanString(str1) === cleanString(str2);
   }
-  
+
+ // The hard way
+ // First we create a function that reurns a map of the string
+ function stringMap(str) {
+ const charMap = {};
+ str = str.replace(/\W/g, "").toLowerCase().split("").sort().join("");
+ for (let char of str) {
+  charMap[char] = ++charMap[char] || 1
+  }
+  return charMap;
+  };
+  // Then we create a function that compares two maps
+  function areAnagra(String1, String2) {
+    const map1 = stringMap(String1);  
+    const map2 = stringMap(String2);
+  // Last we compare the two maps
+  if(Object.keys(map1).length === Object.keys(map2).length) return false;
+  for (let key in map1) {
+    if (map1[key] !== map2[key]) return false;
+    }
+    return true;
+    };
+
+
+
 
 console.log(areAnagrams("ahol?? tUtti3332?", "?ttiut? 33OLha?23"));
-console.log(areAnagrams("hol??? tUtti", "ttiut OLh!!"));
+console.log(areAnag("hol??? tUtti", "ttiut OLh!!"));
